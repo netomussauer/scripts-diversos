@@ -1,3 +1,19 @@
+# =============================================================================
+# Script:    create-webapp.ps1
+# Projeto:   generic (legado Stone / Mundipagg, mantido como referencia)
+# Atividade: Provisionar Azure App Service Plan + Web App via az CLI,
+#            criando recursos idempotentes (so cria se nao existir) e
+#            aplicando AppSettings, PHP/Python version, always-on etc.
+# Contexto:  Script antigo de provisionamento de Web Apps no Azure (PHP 7.1,
+#            cenario Mundipagg historico). Nomes seguem o padrao
+#            <Tenant>-<Env>-<Servico>-... Sintaxe NAO e PowerShell pura —
+#            mistura atribuicoes shell (Var="x") e az CLI, foi originalmente
+#            executada em bash. Mantido como referencia para padroes de
+#            naming de recursos.
+# Pre-req:   - az CLI logado na subscription correta
+#            - Bash (script foi originalmente bash; extensao .ps1 e legada)
+# =============================================================================
+
 ###########################
 ## Constants
 ###########################

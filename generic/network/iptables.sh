@@ -1,4 +1,17 @@
 #!/bin/bash
+# =============================================================================
+# Script:    iptables.sh
+# Projeto:   generic (referencia legada)
+# Atividade: Template completo de firewall iptables para servidor Linux:
+#            limpa regras, ativa ping, desativa protecoes nativas, define
+#            politicas e cria chains com regras por servico.
+# Contexto:  Script legado, importado de trabalhos anteriores. Mantido
+#            como REFERENCIA — nao executar diretamente em producao sem
+#            revisar cada bloco. Originalmente era iptables.txt.
+# Pre-req:   - Linux com iptables instalado
+#            - Modulo ip_tables carregado (script faz modprobe)
+# =============================================================================
+
 modprobe ip_tables
 
 function LimpaRegras(){
